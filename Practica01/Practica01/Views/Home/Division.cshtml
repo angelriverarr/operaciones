@@ -1,0 +1,46 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Division</h1>
+
+<div class="color">
+<form asp-controller="Home" asp-action="Division"> 
+    <div class="card"> 
+<label> Dato1</label>
+
+    @if (ViewBag.datoD1V==0)
+    {
+        
+        <input type="number" placeholder="Coloca el primer numero" name="datoD1"  class="form-control" min="0" max="10"/>
+
+    }else{
+    
+         <input type="number" placeholder="Coloca el primer numero" name="datoD1" value="@ViewBag.datoD1V" class="form-control"/>
+
+    }
+    <label> Dato2</label>
+      @if (ViewBag.datoD2V==0)
+    {
+        
+        <input type="number" placeholder="Coloca el primer numero" name="datoD2"   class="form-control" min="0" max="10"/>
+
+    }else{
+    
+         <input type="number" placeholder="Coloca el primer numero" name="datoD1" value="@ViewBag.datoD2V" class="form-control"min="0" max="10"/>
+
+    }
+
+
+
+
+
+
+<button  class="btn btn-secondary">Calcular</button>
+<label> resultado</label>
+<label> @ViewBag.variableaenviar</label>
+</div>
+</form>
+
+</div>
